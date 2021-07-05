@@ -1,0 +1,58 @@
+.edit-popup,
+.adduser-popup {
+  position: absolute;
+  width: 500px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10rem;
+  top: 4rem;
+  left: 50%;
+  transform: translate(-50%, -90rem);
+  padding: 1.5rem !important;
+  transition: 0.4s transform;
+  z-index: 1;
+  border-radius: 4px;
+  &.active {
+    transform: translate(-50%, -0rem) !important;
+  }
+ 
+  header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    i {
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
+}
+main {
+  transition: 0.4s;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  transition: 0.4s filter;
+  background-color: white;
+  padding: 0.5rem !important;
+  &.filter {
+    filter: brightness(0.5);
+    pointer-events: none;
+  }
+}
+tr {
+  transition: .4s background-color;
+   &.edited {
+    background-color: #29fd0d2a
+  }
+  &.prob {
+    background-color: #fa021a33
+
+  }
+}
